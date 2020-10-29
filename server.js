@@ -4,8 +4,6 @@ var PORT = process.env.PORT || 8080;
 
 var app = express();
 
-require('dotenv').config()
-
 
 
 // Serve static content for the app from the "public" directory in the application directory.
@@ -16,10 +14,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Set Handlebars.
-// var exphbs = require("express-handlebars");
+var exphbs = require("express-handlebars");
 
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+app.get('/', (req, res) => {
+    res.render('index');
+})
 
 // Import routes and give the server access to them.
 // var routes = require("./controllers/catsController.js");
