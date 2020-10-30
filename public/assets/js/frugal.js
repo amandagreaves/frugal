@@ -4,9 +4,10 @@ $(document).ready(function () {
     $("#employmentStatus").on("change", function () {
 
         let value = parseInt($(this).val());
-
+        console.log(value)
         if (value === 1) {
-            $("#paidHourly").removeClass("hidden");
+            $("#paidHourlyContainer").empty()
+            $("#paidHourlyContainer").append(paidHourlyForm);
         };
     });
 
@@ -36,3 +37,13 @@ let hourlyIncomeForm = `
     <input placeholder="" type="text" class="validate">
     <label for="first_name">What is your hourly rate?</label>
 </div>`;
+
+let paidHourlyForm = `
+<div class="input-field col s6">
+    <select id="paidHourlyChoice">
+        <option value="" disabled selected>Choose your option</option>
+        <option value="1">Yes</option>
+        <option value="2">No</option>
+    </select>
+    <label>Are you paid hourly?</label>
+</div>`
