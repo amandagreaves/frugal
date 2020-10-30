@@ -1,25 +1,26 @@
-<h1> Project 2</h1>
+<h3>Day Job</h3>
+
 <div class="row">
     <div class="input-field col s6">
-        <input placeholder="Placeholder" id="income" type="text" class="validate">
-        <label for="first_name">Income Amount</label>
-    </div>
-    <div class="input-field col s6">
-        <select id="incomeType">
+        <select id="employmentStatus">
             <option value="" disabled selected>Choose your option</option>
-            <option value="1">Recurring Income</option>
-            <option value="2">Static Income</option>
+            <option id="1" value="1">Yes</option>
+            <option id="2" value="2">No</option>
         </select>
-        <label>Income Type</label>
+        <label>Are you employed?</label>
     </div>
 </div>
+
 <div class="row">
-    <form class="col s12">
-        <div class="row">
-            <div class="input-field col s6 hidden" id="incomeFrequency">
-                <input placeholder="Placeholder" type="text" class="validate">
-                <label for="first_name">How often are you paid?</label>
-            </div>
-        </div>
-    </form>
+    <div id="paidHourly" class="input-field col s6 hidden">
+        <select id="paidHourlyChoice">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+        </select>
+        <label>Are you paid hourly?</label>
+    </div>
+</div>
+
+<div id="payAmmountContainer" class="row">
 </div>

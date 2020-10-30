@@ -6,7 +6,6 @@ CREATE TABLE recurring_income
     id INT NOT NULL AUTO_INCREMENT,
     static_income_name VARCHAR(30) NOT NULL,
     recurring_income_ammt DECIMAL(10, 2),
-    recurring_income_date DATE NOT NULL
 );
 
 CREATE TABLE static_income
