@@ -17,8 +17,8 @@ $(document).ready(function () {
         let value = parseInt($(this).val());
         console.log(value)
         if (value === 1) {
-            $("#paidHourlyContainer").empty()
-            $("#paidHourlyContainer").append(paidHourlyForm);
+            $("#paidHourlyContainer").removeClass("hidden");
+            console.log("value", $("#paidHourlyContainer"))
         };
     });
 
@@ -26,11 +26,11 @@ $(document).ready(function () {
         let value = parseInt($(this).val());
 
         if (value === 1) {
-            $("#payAmmountContainer").empty();
-            $("#payAmmountContainer").append(hourlyIncomeForm)
+            $("#payAmountContainer").empty();
+            $("#payAmountContainer").append(hourlyIncomeForm)
         } else if (value === 2) {
-            $("#payAmmountContainer").empty();
-            $("#payAmmountContainer").append(annualIncomeForm)
+            $("#payAmountContainer").empty();
+            $("#payAmountContainer").append(annualIncomeForm)
         };
     });
 
@@ -51,12 +51,12 @@ let hourlyIncomeForm = `
 
 let paidHourlyForm = `
 <div class="input-field col s6">
+<label>Are you paid hourly?</label>
     <select id="paidHourlyChoice">
         <option value="" disabled selected>Choose your option</option>
         <option value="1">Yes</option>
         <option value="2">No</option>
     </select>
-    <label>Are you paid hourly?</label>
 </div>`
 
 $("#chirp-submit").on("click", function(event) {
