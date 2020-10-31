@@ -1,4 +1,15 @@
 $(document).ready(function () {
+
+    var newRecurringIncome = {
+        recurring_income_name: "day-job",
+        recurring_income_ammt: 50000,
+      };
+    
+      console.log(newRecurringIncome);
+    
+      // Send an AJAX POST-request with jQuery
+      $.post("/api/new", newRecurringIncome)
+      
     $('select').formSelect();
 
     $("#employmentStatus").on("change", function () {
@@ -47,3 +58,35 @@ let paidHourlyForm = `
     </select>
     <label>Are you paid hourly?</label>
 </div>`
+
+$("#chirp-submit").on("click", function(event) {
+    event.preventDefault();
+  
+    // Make a newChirp object
+    var newRecurringIncome = {
+      recurring_income_name: "day-job",
+      recurring_income_ammt: 50000,
+    };
+  
+    console.log(newRecurringIncome);
+  
+    // Send an AJAX POST-request with jQuery
+    $.post("/api/new", newRecurringIncome)
+      // On success, run the following code
+    //   .then(function() {
+  
+    //     var row = $("<div>");
+    //     row.addClass("chirp");
+  
+    //     row.append("<p>" + newChirp.author + " chirped: </p>");
+    //     row.append("<p>" + newChirp.body + "</p>");
+    //     row.append("<p>At " + moment(newChirp.created_at).format("h:mma on dddd") + "</p>");
+  
+    //     $("#chirp-area").prepend(row);
+  
+    //   });
+  
+    // Empty each input box by replacing the value with an empty string
+    // $("#author").val("");
+    // $("#chirp-box").val("");
+  });

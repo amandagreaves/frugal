@@ -1,3 +1,4 @@
+require('dotenv').config()
 var express = require("express");
 
 var PORT = process.env.PORT || 8080;
@@ -24,9 +25,10 @@ app.get('/', (req, res) => {
 })
 
 // Import routes and give the server access to them.
-// var routes = require("./controllers/catsController.js");
+// var routes = require("./controllers/frugalController.js");
 
 // app.use(routes);
+require("./routes/api-routes")(app);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
