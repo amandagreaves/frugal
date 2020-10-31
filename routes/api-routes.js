@@ -16,7 +16,6 @@ module.exports = function(app) {
   
     // });
   
-    // Add a chirp
     app.post("/api/new", function(req, res) {
   
       console.log("RecurringIncome Data:");
