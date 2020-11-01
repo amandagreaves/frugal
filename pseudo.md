@@ -31,3 +31,18 @@ Dashboard
 
 
 
+TODO
+-front end form
+    -fix hidden issue
+    -submit button
+        -send info to back end
+
+-front end dashboard
+    -api.get from tables
+
+-calculator
+
+-write api files for each table
+    -front end AND back end
+
+
