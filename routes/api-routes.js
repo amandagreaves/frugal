@@ -26,7 +26,6 @@ module.exports = function(app) {
         recurring_income_name: req.body.recurring_income_name,
         recurring_income_ammt: req.body.recurring_income_ammt,
       }).then(function(results) {
-        // `results` here would be the newly created chirp
         res.end();
       });
   
