@@ -11,4 +11,8 @@ module.exports = function(app) {
     res.render('staticIncome');
   });
 
+  app.get("/goals", function(req, res) {
+    res.render('goals');
+  });
+
 };

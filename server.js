@@ -16,7 +16,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // routes
-require("./routes/html-rountes")(app);
+require("./routes/html-routes")(app);
 require("./routes/api-routes")(app);
 
 // Start server
