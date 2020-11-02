@@ -58,4 +58,3 @@ let calculateAnnualIncome = () => {
         return recIncAmount;
     }
 }
-
