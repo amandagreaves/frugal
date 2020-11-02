@@ -1,23 +1,9 @@
-let RecurringIncome = require("../models/frugal_db");
+let RecurringIncome = require("../models/recurringIncome");
 let RecurringExpense = require("../models/recurringExpense")
 let StaticIncome = require("../models/staticIncome")
 let StaticExpense = require("../models/staticExpense")
 
 module.exports = function(app) {
-
-    // Get all chirps
-    // app.get("/api/all", function(req, res) {
-  
-      // Finding all Chirps, and then returning them to the user as JSON.
-      // Sequelize queries are asynchronous, which helps with perceived speed.
-      // If we want something to be guaranteed to happen after the query, we'll use
-      // the .then function
-    //   Chirp.findAll({}).then(function(results) {
-    //     // results are available to us inside the .then
-    //     res.json(results);
-    //   });
-  
-    // });
   
     app.post("/recurringincome/new", function(req, res) {
   
@@ -30,8 +16,7 @@ module.exports = function(app) {
       }).then(function(results) {
         console.log(results)
         res.end();
-      });
-  
+      });  
     });
     
     
@@ -48,9 +33,7 @@ module.exports = function(app) {
         console.log(results)
         res.end();
       });
-  
     });
-
 
     app.post("/staticIncome/new", function(req, res) {
   
@@ -64,8 +47,7 @@ module.exports = function(app) {
       }).then(function(results) {
         console.log(results)
         res.end();
-      });
-  
+      });  
     });
     
     app.post("/staticExpense/new", function(req, res) {
@@ -80,7 +62,6 @@ module.exports = function(app) {
       }).then(function(results) {
         console.log(results)
         res.end();
-      });
-  
+      }); 
     });
   };
