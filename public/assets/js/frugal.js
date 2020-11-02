@@ -1,15 +1,4 @@
 $(document).ready(function () {
-
-    var newRecurringIncome = {
-        recurring_income_name: "day-job",
-        recurring_income_ammt: 50000,
-      };
-    
-      console.log(newRecurringIncome);
-    
-      // Send an AJAX POST-request with jQuery
-      $.post("/api/new", newRecurringIncome)
-      
     $('select').formSelect();
 
     $("#employmentStatus").on("change", function () {
@@ -17,7 +6,8 @@ $(document).ready(function () {
         let value = parseInt($(this).val());
         console.log(value)
         if (value === 1) {
-            $("#paidHourlyContainer").removeClass("hidden");
+            $("#recIncName").removeClass("hidden");
+            $("#paidHourly").removeClass("hidden");
             console.log("value", $("#paidHourlyContainer"))
         };
     });
@@ -26,67 +16,44 @@ $(document).ready(function () {
         let value = parseInt($(this).val());
 
         if (value === 1) {
-            $("#payAmountContainer").empty();
-            $("#payAmountContainer").append(hourlyIncomeForm)
+            $("#annualIncome").addClass("hidden");
+            $("#hourlyIncome").removeClass("hidden");
+            $("#hourlyHours").removeClass("hidden");
         } else if (value === 2) {
-            $("#payAmountContainer").empty();
-            $("#payAmountContainer").append(annualIncomeForm)
+            $("#hourlyHours").addClass("hidden");
+            $("#hourlyIncome").addClass("hidden");
+            $("#annualIncome").removeClass("hidden");
         };
     });
+
+    $("#submitBtn").click(() => {
+        event.preventDefault();
+        let recIncName = $("#recIncVal").val();
+        let recIncAmount = calculateAnnualIncome();
+
+        let newRecurringIncome = {
+            recurring_income_name: recIncName,
+            recurring_income_ammt: recIncAmount,
+        };
+
+        $.post("/api/new", newRecurringIncome)
+
+    })
+
 
 
 });
 
-let annualIncomeForm = `
-<div id="annualIncome" class="input-field col s6">
-    <input placeholder="" type="text" class="validate">
-    <label for="first_name">What is your annual salary?</label>
-</div>`;
+let calculateAnnualIncome = () => {
+    if (parseInt($("#paidHourlyChoice").val()) === 1) {
+        let hourlyAmount = parseInt($("#hourlyIncVal").val());
+        let hourlyHours = parseInt($("#hourlyHoursVal").val());
 
-let hourlyIncomeForm = `
-<div id="hourlyIncome" class="input-field col s6">
-    <input placeholder="" type="text" class="validate">
-    <label for="first_name">What is your hourly rate?</label>
-</div>`;
+        let recIncAmount = hourlyAmount * hourlyHours * 52;
 
-let paidHourlyForm = `
-<div class="input-field col s6">
-<label>Are you paid hourly?</label>
-    <select id="paidHourlyChoice">
-        <option value="" disabled selected>Choose your option</option>
-        <option value="1">Yes</option>
-        <option value="2">No</option>
-    </select>
-</div>`
-
-$("#chirp-submit").on("click", function(event) {
-    event.preventDefault();
-  
-    // Make a newChirp object
-    var newRecurringIncome = {
-      recurring_income_name: "day-job",
-      recurring_income_ammt: 50000,
-    };
-  
-    console.log(newRecurringIncome);
-  
-    // Send an AJAX POST-request with jQuery
-    $.post("/api/new", newRecurringIncome)
-      // On success, run the following code
-    //   .then(function() {
-  
-    //     var row = $("<div>");
-    //     row.addClass("chirp");
-  
-    //     row.append("<p>" + newChirp.author + " chirped: </p>");
-    //     row.append("<p>" + newChirp.body + "</p>");
-    //     row.append("<p>At " + moment(newChirp.created_at).format("h:mma on dddd") + "</p>");
-  
-    //     $("#chirp-area").prepend(row);
-  
-    //   });
-  
-    // Empty each input box by replacing the value with an empty string
-    // $("#author").val("");
-    // $("#chirp-box").val("");
-  });
+        return recIncAmount;
+    } else if (parseInt($("#paidHourlyChoice").val()) === 2) {
+        let recIncAmount = parseInt($("#annualIncVal").val());
+        return recIncAmount;
+    }
+}
