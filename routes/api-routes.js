@@ -1,5 +1,7 @@
 let RecurringIncome = require("../models/frugal_db");
-let RecurringExpenses = require("../models/recurringExpenses")
+let RecurringExpense = require("../models/recurringExpense")
+let StaticIncome = require("../models/staticIncome")
+let StaticExpense = require("../models/staticExpense")
 
 module.exports = function(app) {
 
@@ -38,7 +40,7 @@ module.exports = function(app) {
       console.log("RecurringExpense Data:");
       console.log(req.body);
   
-      RecurringIncome.create({
+      RecurringExpense.create({
         recurring_expense_name: req.body.recurring_expense_name,
         recurring_expense_ammt: req.body.recurring_expense_ammt,
         recurring_expense_date: req.body.recurring_expense_date,
@@ -55,7 +57,7 @@ module.exports = function(app) {
       console.log("Static Income Data:");
       console.log(req.body);
   
-      RecurringIncome.create({
+      StaticIncome.create({
         static_income_name: req.body.static_income_name,
         static_income_ammt: req.body.static_income_ammt,
         static_income_date: req.body.static_income_date,
@@ -65,5 +67,20 @@ module.exports = function(app) {
       });
   
     });
+    
+    app.post("/staticExpense/new", function(req, res) {
   
+      console.log("Static Expense Data:");
+      console.log(req.body);
+  
+      StaticExpense.create({
+        static_expense_name: req.body.static_expense_name,
+        static_expense_ammt: req.body.static_expense_ammt,
+        static_expense_date: req.body.static_expense_date,
+      }).then(function(results) {
+        console.log(results)
+        res.end();
+      });
+  
+    });
   };
