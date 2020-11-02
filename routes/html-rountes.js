@@ -4,8 +4,8 @@ module.exports = function(app) {
     res.render('index');
   });
 
-  app.get("/expenses", function(req, res) {
-    res.render('expenses');
+  app.get("/expense/recurring", function(req, res) {
+    res.render('recurringExpenses');
   });
 
 };
