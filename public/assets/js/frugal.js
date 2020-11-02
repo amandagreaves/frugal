@@ -37,8 +37,7 @@ $(document).ready(function () {
             recurring_income_ammt: recIncAmount,
         };
 
-        $.post("/api/new", newRecurringIncome)
-        $.get("/expenses")
+        $.post("/recurringincome/new", newRecurringIncome)
 
     })
 
@@ -59,3 +58,4 @@ let calculateAnnualIncome = () => {
         return recIncAmount;
     }
 }
+

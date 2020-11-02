@@ -1,4 +1,5 @@
-var RecurringIncome = require("../models/frugal_db.js");
+let RecurringIncome = require("../models/frugal_db");
+let RecurringExpenses = require("../models/recurringExpenses")
 
 module.exports = function(app) {
 
@@ -16,16 +17,33 @@ module.exports = function(app) {
   
     // });
   
-    app.post("/api/new", function(req, res) {
+    app.post("/recurringincome/new", function(req, res) {
   
       console.log("RecurringIncome Data:");
       console.log(req.body);
-     
   
       RecurringIncome.create({
         recurring_income_name: req.body.recurring_income_name,
         recurring_income_ammt: req.body.recurring_income_ammt,
       }).then(function(results) {
+        console.log(results)
+        res.end();
+      });
+  
+    });
+    
+    
+    app.post("/recurringExpense/new", function(req, res) {
+  
+      console.log("RecurringExpense Data:");
+      console.log(req.body);
+  
+      RecurringIncome.create({
+        recurring_expense_name: req.body.recurring_expense_name,
+        recurring_expense_ammt: req.body.recurring_expense_ammt,
+        recurring_expense_date: req.body.recurring_expense_date,
+      }).then(function(results) {
+        console.log(results)
         res.end();
       });
   
