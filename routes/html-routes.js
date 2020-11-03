@@ -4,6 +4,10 @@ module.exports = function(app) {
     res.render('index');
   });
 
+  app.get("/income/recurring", function(req, res) {
+    res.render('recurringIncome');
+  });
+
   app.get("/expense/recurring", function(req, res) {
     res.render('recurringExpenses');
   });

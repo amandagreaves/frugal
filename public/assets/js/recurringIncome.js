@@ -37,7 +37,7 @@ $(document).ready(function () {
             recurring_income_ammt: recIncAmount,
         };
 
-        $.post("/recurringincome/new", newRecurringIncome)
+        $.post("/recurringIncome/new", newRecurringIncome)
 
     })
 

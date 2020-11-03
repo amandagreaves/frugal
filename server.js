@@ -17,7 +17,8 @@ app.set("view engine", "handlebars");
 
 // routes
 require("./routes/html-routes")(app);
-require("./routes/api-routes")(app);
+require("./routes/income-api-routes")(app);
+require("./routes/expense-api-routes")(app);
 
 // Start server
 app.listen(PORT, function() {
