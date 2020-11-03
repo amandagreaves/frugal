@@ -1,8 +1,8 @@
-// Set up MySQL connection.
+// Dependencies
 var Sequelize = require("sequelize");
 
-
-var sequelize = new Sequelize("frugal_db", "root", process.env.PASSWORD, {
+// Creates mySQL connection using Sequelize, the third argument spot is our password.
+var sequelize = new Sequelize("frugal_db", "root", process.env.DB_PASS, {
   host: "localhost",
   port: 3306,
   dialect: "mysql",
@@ -13,5 +13,5 @@ var sequelize = new Sequelize("frugal_db", "root", process.env.PASSWORD, {
   }
 });
 
-// Export connection for our ORM to use.
+// Export the connection for other files to use.
 module.exports = sequelize;
