@@ -17,6 +17,12 @@ module.exports = function (app) {
         });
     });
 
+    app.get("/recurringIncome/select", function(req, res) {
+        RecurringIncome.findAll({}).then(function(recIncData) {
+          res.json(recIncData);
+        });
+      });
+
     app.post("/staticIncome/new", function (req, res) {
 
         console.log("Static Income Data:");
@@ -31,4 +37,10 @@ module.exports = function (app) {
             res.end();
         });
     });
+
+    app.get("/staticIncome/select", function(req, res) {
+        StaticIncome.findAll({}).then(function(statIncData) {
+          res.json(statIncData);
+        });
+      });
 };

@@ -13,8 +13,13 @@ module.exports = function (app) {
       recurring_expense_ammt: req.body.recurring_expense_ammt,
       recurring_expense_date: req.body.recurring_expense_date,
     }).then(function (results) {
-      console.log(results)
       res.end();
+    });
+  });
+
+  app.get("/recurringExpense/select", function(req, res) {
+    RecurringExpense.findAll({}).then(function(recExpData) {
+      res.json(recExpData);
     });
   });
 
@@ -32,4 +37,12 @@ module.exports = function (app) {
       res.end();
     });
   });
+
+  app.get("/staticExpense/select", function(req, res) {
+    StaticExpense.findAll({}).then(function(statExpData) {
+      res.json(statExpData);
+    });
+  });
+
+
 };
