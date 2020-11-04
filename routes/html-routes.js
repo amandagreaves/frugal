@@ -9,7 +9,7 @@ module.exports = function(app) {
   });
 
   app.get("/expense/recurring", function(req, res) {
-    res.render('recurringExpenses');
+    res.render('recurringExpenses', {recurring_expense_name: "Car Payment"});
   });
   
   app.get("/income/static", function(req, res) {
