@@ -1,60 +1,67 @@
-# Project 2
-​
-## Application Requirements
-​
-* Must use a Node and Express server
-​
-* Must use Handlebars.js as the template engine
-​
-* Must be backed by a MySQL database with a Sequelize ORM
-​
-* Must utilize both GET and POST routes for retrieving and adding new data
-​
-* Must be deployed using Heroku (with data)
-​
-* Must utilize at least one new library, package, or technology that we haven’t discussed
-​
-* Must have a polished front end/UI
-​
-* Must have a folder structure that meets the MVC paradigm
-​
-* Must meet good quality coding standards (indentation, scoping, naming)
-​
-* Must protect API keys in Node with environment variables
-​
-​
-## Presentation Requirements
-​
-Use this [project presentation template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit?usp=sharing) to address the following: 
-​
-* Elevator pitch: a one minute description of your application
-​
-* Concept: What is your user story? What was your motivation for development?
-​
-* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
-​
-* Demo: Show your stuff!
-​
-* Directions for Future Development
-​
-* Links to to the deployed application and the GitHub repository. Use this guide for [deploying your application to Heroku](../04-Important/GitHubHerokuConnect.md) if you need a reminder on how to deploy!
-​
-​
-## Grading Metrics 
-​
-| Metric        | Weight | 
-| ---           | ---    |
-| Concept       | 10%    |
-| Design        | 20%    |
-| Functionality | 30%    |
-| Collaboration | 30%    |
-| Presentation  | 10%    |
-​
-​
-## Submission on BCS
-​
-You are required to submit the following:
-​
-* The URL of the deployed application
-​
-* The URL of the GitHub repository
+# Project: Frugal
+
+<img src="https://img.shields.io/badge/License-GNU AGPLv3.0-blue.svg" alt="License image of GNU AGPLv3.0" />
+  
+## Description
+This Frugal App allows you to budget your finances, log your income and expenses, and invest in your future.
+
+## Table of Contents
+* [Description](#description)
+* [User Story](#userstory)
+* [Installation](#installation)
+* [Technologies](#technologies)
+* [Contributors](#contributors)
+* [Screenshot](#screenshot)
+* [Links](#links)
+* [Contacts](#contacts)
+
+## User Story
+As users, we want to be able to enter our individual income and expenses and have the app store that information so we can efficiently manage our finances.
+
+
+## Installation
+To check how this application works, user will have to follow the following steps-
+
+1. Create a GitHub repo called `burger` and clone it to your computer.
+
+2. Make a package.json file by running `npm init` from the command line.
+
+3. Install the Express npm package: `npm install express`.
+
+4. Create a server.js file.
+
+5. Install the Handlebars npm package: `npm install express-handlebars`.
+
+6. Install MySQL2 npm package: `npm install mysql2`.
+
+7. Install Sequelize npm package: `npm install sequelize`.
+
+8. Require the following npm packages inside of the server.js file:
+   * express
+
+## Technologies
+- Node.js, MySQL, Express.js, Handlebars.js, Sequelize, GET & POST Routes, Heroku for Deployment, etc.
+
+## Screenshots
+Command-line Terminal Screenshot: 
+
+MySQL Workbench Screenshot: 
+
+
+## Links
+Heroku Deployed App: https://desolate-peak-02102.herokuapp.com/
+
+
+GitHub Repo: https://github.com/cynesthete/frugal/
+
+## Contributors
+1. Jarome Plewe
+2. Tony Rivas
+3. Raj Shrestha
+4. Amanda Greaves
+
+## Contacts
+1. Jarome Plewe (GitHub Link: https://github.com/jaromplewe)
+2. Tony Rivas (GitHub Link: https://github.com/cynesthete)
+3. Raj Shrestha (GitHub Link: https://github.com/shreraje)
+4. Amanda Greaves (GitHub Link: https://github.com/amandagreaves)
