@@ -14,7 +14,7 @@
 
 <body>
   <ul id="dropdown1" class="dropdown-content">
-  <li><a href="/">Recurring Income</a></li>
+  <li><a href="/income/recurring">Recurring Income</a></li>
   <li><a href="/income/static">Static Income</a></li>
   <li class="divider"></li>
   <li><a href="/expense/recurring">Recurring Expense</a></li>
@@ -27,7 +27,7 @@
       <a href="#!" class="brand-logo center">Frugal</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Dashboard</a></li>
+        <li><a href="/">Dashboard</a></li>
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Add<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
     </div>
@@ -35,7 +35,13 @@
 
   {{{ body }}}
 
-
+<script>
+  $(document).ready(function () {
+    $('select').formSelect();
+    $(".dropdown-trigger").dropdown();
+  });
+</script>
+   
 </body>
 
 </html>

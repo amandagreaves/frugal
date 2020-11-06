@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    $('select').formSelect();
-    $(".dropdown-trigger").dropdown();
 
     $("#employmentStatus").on("change", function () {
 
