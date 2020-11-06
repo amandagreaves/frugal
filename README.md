@@ -43,10 +43,8 @@ To check how this application works, user will have to follow the following step
 - Node.js, MySQL, Express.js, Handlebars.js, Sequelize, GET & POST Routes, Heroku for Deployment, etc.
 
 ## Screenshots
-Command-line Terminal Screenshot: 
-
-MySQL Workbench Screenshot: 
-
+Heroku Deployed App Screenshot: 
+<img width="2045" alt="Heroku Deployed App Screenshot" src="https://user-images.githubusercontent.com/61192734/98293303-edb12e00-1f62-11eb-9a5f-2fe00f02af7a.png">
 
 ## Links
 Heroku Deployed App: https://desolate-peak-02102.herokuapp.com/
