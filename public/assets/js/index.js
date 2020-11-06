@@ -45,7 +45,7 @@ let appendExpense = async () => {
         recExpNameDisplay = recExpObj[i].recurring_expense_name;
         recExpAmtDisplay = recExpObj[i].recurring_expense_ammt / 12;
 
-        let ExpenseCard = `<a class="collection-item"><span class="new badge red darken-1">$ ${ recExpAmtDisplay.toFixed(2) }</span>${ recExpNameDisplay }</a>`
+        let ExpenseCard = `<a class="collection-item"><span class="new badge red darken-1" data-badge-caption="">$ ${ recExpAmtDisplay.toFixed(2) }</span>${ recExpNameDisplay }</a>`
         $("#recExpContainer").append(ExpenseCard)
     }
 
@@ -55,7 +55,7 @@ let appendExpense = async () => {
         statExpNameDisplay = statExpObj[i].static_expense_name;
         statExpAmtDisplay = statExpObj[i].static_expense_ammt;
 
-        let ExpenseCard = `<a class="collection-item"><span class="new badge red darken-1">$ ${ statExpAmtDisplay }</span>${ statExpNameDisplay }</a>`
+        let ExpenseCard = `<a class="collection-item"><span class="new badge red darken-1" data-badge-caption="">$ ${ statExpAmtDisplay }</span>${ statExpNameDisplay }</a>`
         $("#statExpContainer").append(ExpenseCard)
     }
 };
