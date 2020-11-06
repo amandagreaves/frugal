@@ -40,10 +40,13 @@ To check how this application works, user will have to follow the following step
    * express
 
 ## Technologies
-- Node.js, MySQL, Express.js, Handlebars.js, Sequelize, GET & POST Routes, Heroku for Deployment, etc.
+- JS, Chart.js, Handlebars, CSS, Node, Materialize, Express, MySQL2, Sequelize, Dotenv, JAWSDB MySQL, etc.
 
 ## Screenshots
-Heroku Deployed App Screenshot: 
+Heroku Deployed App Screenshots:
+
+<img width="2046" alt="Heroku Deployed App Dashboard" src="https://user-images.githubusercontent.com/61192734/98323162-0d197c80-1f9e-11eb-9e7e-722b071b5045.png">
+
 <img width="2045" alt="Heroku Deployed App Screenshot" src="https://user-images.githubusercontent.com/61192734/98293303-edb12e00-1f62-11eb-9a5f-2fe00f02af7a.png">
 
 ## Links
