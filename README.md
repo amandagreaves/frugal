@@ -56,13 +56,13 @@ Heroku Deployed App: https://desolate-peak-02102.herokuapp.com/
 GitHub Repo: https://github.com/cynesthete/frugal/
 
 ## Contributors
-1. Jarome Plewe
+1. Jarom Plewe
 2. Tony Rivas
 3. Raj Shrestha
 4. Amanda Greaves
 
 ## Contacts
-1. Jarome Plewe (GitHub Link: https://github.com/jaromplewe)
+1. Jarom Plewe (GitHub Link: https://github.com/jaromplewe)
 2. Tony Rivas (GitHub Link: https://github.com/cynesthete)
 3. Raj Shrestha (GitHub Link: https://github.com/shreraje)
 4. Amanda Greaves (GitHub Link: https://github.com/amandagreaves)
